@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "module": "es2015",
+    "moduleResolution": "node",
+    "noImplicitAny": true,
+    "target": "es5",
+    "jsx": "react",
+    "experimentalDecorators": true,
+    "sourceMap": true,
+    "skipDefaultLibCheck": true,
+    "strict": true,
+    "lib": ["es6", "dom"],
+    "types": ["webpack-env"]
+  },
+  "include": [
+    "**/*.ts"
+  ],
+  "exclude": [
+    "bin",
+    "node_modules"
+  ]
+}
