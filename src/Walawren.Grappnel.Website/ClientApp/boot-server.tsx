@@ -7,18 +7,12 @@ import { createMemoryHistory } from 'history';
 import { createServerRenderer, RenderResult } from 'aspnet-prerendering';
 import { routes } from './routes';
 import configureStore from './configureStore';
-const globalAny:any = global;
 
 export default createServerRenderer(params => {
     return new Promise<RenderResult>((resolve, reject) => {
         // Prepare Redux store with in-memory history, and dispatch a navigation event
         // corresponding to the incoming URL
         const basename = params.baseUrl.substring(0, params.baseUrl.length - 1); // Remove trailing slash
-        globalAny.window = {
-            location: {
-                origin: basename
-            }
-        };
         const urlAfterBasename = params.url.substring(basename.length);
         const store = configureStore(createMemoryHistory());
         store.dispatch(replace(urlAfterBasename));
