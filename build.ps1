@@ -40,5 +40,5 @@ exec { & dotnet publish .\src\Walawren.Grappnel.Website -c Release -o $publish /
 $source = "$(Get-ScriptDirectory)\publish\*"
 $destinationPath = "$(Get-ScriptDirectory)\artifacts\"
 New-Item -ItemType Directory -Force -Path $destinationPath
-$destination = "$($destinationPath)Walawren.Grappnel.Website.0.0.0.$($revision).zip"
+$destination = "$($destinationPath)Walawren.Grappnel.Website.0.0.$($revision).zip"
 Compress-Archive -Path $source -DestinationPath $destination
