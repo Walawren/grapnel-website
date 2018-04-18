@@ -23,8 +23,6 @@ if(Test-Path $publish) {Remove-Item $publish -Force -Recurse}
 
 if(Test-Path "..\..\artifacts") {RemoveItem "..\..\artifacts" -Force -Recurse}
 
-exec { & dotnet restore .\src\Walawren.Grappnel.Website.sln }
-
 exec { & dotnet build .\src\Walawren.Grappnel.Website.sln }
 
 $revision = @{ $true = $env:APPVEYOR_BUILD_NUMBER; $false = 1 }[$env:APPVEYOR_BUILD_NUMBER -ne $NULL];
