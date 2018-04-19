@@ -5,9 +5,17 @@ build_script:
 - ps: .\build.ps1
 test: off
 artifacts:  
-- path: .\artifacts\**\*.*
+- path: .\artifacts\Grappnel.Website\*.zip
+  name: Grappnel.Website
+  type: WebDeployPackage
 deploy:
 - provider: Environment
   name: WalawrenWebServer
   on:
+    branch: master
+    site_name: grappnel.walawren.com
+- provider: Environment
+  name: WalawrenWebServer
+  on:
+    appveyor_repo_tag: true
     site_name: grappnel.walawren.com
