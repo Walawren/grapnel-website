@@ -59,16 +59,18 @@ class LoginForm extends ILoginForm {
         return (
             <form onSubmit={this.handleSubmit}>
                 <label>
-                    Username:
+                    <label htmlFor="username">Username:</label>
                     <input id="username" type="text"
+                        className="form-control"
                         value={this.state.username}
                         onChange={this.handleUsernameChange} />
-                    Password:
+                    <label htmlFor="password">Password:</label>
                     <input id="password" type="password"
+                        className="form-control"
                         value={this.state.password}
                         onChange={this.handlePasswordChange} />
                 </label>
-                <input id="login-submit" type="submit" value="Submit" />
+                <input id="login-submit" className="btn btn-primary" type="submit" value="Submit" />
             </form>
         );
     }

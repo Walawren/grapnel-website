@@ -6,4 +6,8 @@ build_script:
 test: off
 artifacts:  
 - path: .\artifacts\**\*.*
-deploy: off
+deploy:
+- privider: Environment
+  name: WalawrenWebServer
+    on:
+      site_name: grappnel.walawren.com
