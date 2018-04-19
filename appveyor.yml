@@ -14,8 +14,10 @@ deploy:
   on:
     branch: master
     site_name: grappnel.walawren.com
+    Grappnel.Website.deploy_website: true
 - provider: Environment
   name: WalawrenWebServer
   on:
     appveyor_repo_tag: true
     site_name: grappnel.walawren.com
+    Grappnel.Website.deploy_website: true
