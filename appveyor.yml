@@ -7,7 +7,7 @@ test: off
 artifacts:  
 - path: .\artifacts\**\*.*
 deploy:
-- privider: Environment
+- provider: Environment
   name: WalawrenWebServer
-    on:
-      site_name: grappnel.walawren.com
+  on:
+    site_name: grappnel.walawren.com
