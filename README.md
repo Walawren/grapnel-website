@@ -1,5 +1,5 @@
 # grapnel-website
-Windows Build: [![Windows build](https://ci.appveyor.com/api/projects/status/sslix3jk1nf9wmk3/branch/master?svg=true)](https://ci.appveyor.com/project/ecarlson94/grappnel-website/branch/master)
+Windows Build: [![Windows build](https://walawren.visualstudio.com/_apis/public/build/definitions/846b1822-cbed-4164-a9ac-f0b92052a70b/1/badge)](https://walawren.visualstudio.com/Grappnel%20Website/_build/index?definitionId=1)
 Linux Build: [![Linux Build](https://travis-ci.org/Walawren/grappnel-website.svg?branch=master)](https://travis-ci.org/Walawren/grappnel-website)
 
 ## Compiling
