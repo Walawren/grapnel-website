@@ -8,16 +8,18 @@ artifacts:
 - path: .\artifacts\Grappnel.Website\*.zip
   name: Grappnel.Website
   type: WebDeployPackage
+environment:
+  site_to_deploy: grappnel.walawren.com
 deploy:
 - provider: Environment
   name: WalawrenWebServer
+  Grappnel.Website.deploy_website: true
+  site_name: $(site_to_deploy)
   on:
     branch: master
-    site_name: grappnel.walawren.com
-    Grappnel.Website.deploy_website: true
 - provider: Environment
   name: WalawrenWebServer
+  Grappnel.Website.deploy_website: true
+  site_name: $(site_to_deploy)
   on:
     appveyor_repo_tag: true
-    site_name: grappnel.walawren.com
-    Grappnel.Website.deploy_website: true
