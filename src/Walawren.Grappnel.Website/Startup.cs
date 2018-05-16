@@ -8,8 +8,9 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.SpaServices.Webpack;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Walawren.Grappnel.Website.Infrastructure;
 
-namespace Walawren_Grappnel_Website
+namespace Walawren.Grappnel.Website
 {
     public class Startup
     {
@@ -33,6 +34,10 @@ namespace Walawren_Grappnel_Website
                 options.Authority = "https://dev-522314.oktapreview.com/oauth2/auseltor5uXFhRfVk0h7"; //TODO: change this by environment
                 options.Audience = "api://grappnel";
             });
+
+            services.AddOptions();
+            services.Configure<AuthenticationSettings>(Configuration.GetSection("Authentication"));
+            services.AddSingleton<IConfiguration>(Configuration);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

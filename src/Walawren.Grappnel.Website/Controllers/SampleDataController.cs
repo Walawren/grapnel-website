@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Authorization;
 
-namespace Walawren_Grappnel_Website.Controllers
+namespace Walawren.Grappnel.Website.Controllers
 {
     [Authorize]
     [Route("api/[controller]")]

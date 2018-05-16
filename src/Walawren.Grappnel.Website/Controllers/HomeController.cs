@@ -5,7 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Walawren_Grappnel_Website.Controllers
+namespace Walawren.Grappnel.Website.Controllers
 {
     public class HomeController : Controller
     {

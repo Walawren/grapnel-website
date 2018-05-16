@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 
-namespace Walawren_Grappnel_Website
+namespace Walawren.Grappnel.Website
 {
     public class Program
     {

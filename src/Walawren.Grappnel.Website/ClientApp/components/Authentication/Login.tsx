@@ -6,33 +6,33 @@ import * as Okta from '../../okta';
 import * as Router from 'react-router';
 
 class Login extends React.Component<Okta.AuthProps, Okta.AuthState> {
-    constructor(props: Okta.AuthProps){
-        super(props);
-        this.state = {
-            authenticated: null
-        }
-
-        this.checkAuthentication = this.checkAuthentication.bind(this);
-        this.checkAuthentication();
+  constructor(props: Okta.AuthProps) {
+    super(props);
+    this.state = {
+      authenticated: null
     }
 
-    async checkAuthentication() {
-        const authenticated = await this.props.auth.isAuthenticated();
-        if(authenticated !== this.state.authenticated){
-            this.setState({authenticated})
-        }
-    }
+    this.checkAuthentication = this.checkAuthentication.bind(this);
+    this.checkAuthentication();
+  }
 
-    componentDidUpdate() {
-        this.checkAuthentication();
+  async checkAuthentication() {
+    const authenticated = await this.props.auth.isAuthenticated();
+    if (authenticated !== this.state.authenticated) {
+      this.setState({ authenticated })
     }
+  }
 
-    render(){
-        if (this.state.authenticated === null) return null;
-        return this.state.authenticated
-            ? <Redirect to={{pathname: '/'}} />
-            : <LoginForm {...this.props} />;
-    }
+  componentDidUpdate() {
+    this.checkAuthentication();
+  }
+
+  render() {
+    if (this.state.authenticated === null) return null;
+    return this.state.authenticated
+      ? <Redirect to={{ pathname: '/' }} />
+      : <LoginForm {...this.props} />;
+  }
 }
 
 export default withAuth(Login);

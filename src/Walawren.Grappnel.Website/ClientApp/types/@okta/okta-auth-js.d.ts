@@ -1,18 +1,18 @@
 declare module '@okta/okta-auth-js' {
-    interface OktaAuthParams {
-        url?: string;
-    }
+  interface OktaAuthParams {
+    url?: string;
+  }
 
-    interface SignInParameters {
-        username: string;
-        password: string;
-    }
+  interface SignInParameters {
+    username: string;
+    password: string;
+  }
 
-    interface OktaAuth {
-        new(params: OktaAuthParams): OktaAuth;
-        signIn: (params: SignInParameters) => any;
-    }
+  interface OktaAuth {
+    new(params: OktaAuthParams): OktaAuth;
+    signIn: (params: SignInParameters) => any;
+  }
 
-    const OktaAuth: OktaAuth;
-    export = OktaAuth;
+  const OktaAuth: OktaAuth;
+  export = OktaAuth;
 }

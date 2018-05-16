@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 
-namespace Walawren_Grappnel_Website.Controllers
+namespace Walawren.Grappnel.Website.Controllers
 {
     [Route("api/[controller]")]
     public class AuthenticationController : Controller
