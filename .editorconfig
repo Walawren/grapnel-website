@@ -1,0 +1,13 @@
+root = true
+
+[*]
+end_of_line = crlf
+insert_file_newline = true
+charset = utf-8
+indent_style = space
+
+[*.{js,xml,cshtml,html,json,tsx,jsx,ts}]
+indent_size = 2
+
+[*.{cs,css}]
+indent_size = 4
